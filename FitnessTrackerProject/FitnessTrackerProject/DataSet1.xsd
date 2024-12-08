@@ -1,0 +1,703 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="6" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="fitnesstrackerdatabaseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="fitnesstrackerdatabaseConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.FitnessTrackerProject.Properties.Settings.GlobalReference.Default.fitnesstrackerdatabaseConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="FitnessTConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="FitnessTConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.FitnessTrackerProject.Properties.Settings.GlobalReference.Default.FitnessTConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="FitnessTrackerDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="FitnessTrackerDBConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.FitnessTrackerProject.Properties.Settings.GlobalReference.Default.FitnessTrackerDBConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="dbConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="dbConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.FitnessTrackerProject.Properties.Settings.GlobalReference.Default.dbConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="FitnesstranckerDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="FitnesstranckerDBConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.FitnessTrackerProject.Properties.Settings.GlobalReference.Default.FitnesstranckerDBConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DBfitnessConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DBfitnessConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.FitnessTrackerProject.Properties.Settings.GlobalReference.Default.DBfitnessConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="FitnessDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="FitnessDBConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.FitnessTrackerProject.Properties.Settings.GlobalReference.Default.FitnessDBConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UserInfomationTableAdapter" GeneratorDataComponentClassName="UserInfomationTableAdapter" Name="UserInfomation" UserDataComponentName="UserInfomationTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FitnessDBConnectionString (Settings)" DbObjectName="FitnessDB.dbo.UserInfomation" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [UserInfomation] WHERE (([UserID] = @Original_UserID) AND ((@IsNull_UserName = 1 AND [UserName] IS NULL) OR ([UserName] = @Original_UserName)) AND ((@IsNull_Email = 1 AND [Email] IS NULL) OR ([Email] = @Original_Email)) AND ((@IsNull_Password = 1 AND [Password] IS NULL) OR ([Password] = @Original_Password)) AND ((@IsNull_Gender = 1 AND [Gender] IS NULL) OR ([Gender] = @Original_Gender)) AND ((@IsNull_Weight = 1 AND [Weight] IS NULL) OR ([Weight] = @Original_Weight)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_UserID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UserID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_UserName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_UserName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Email" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Email" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Password" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Password" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Password" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Password" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Gender" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Gender" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Gender" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Gender" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Weight" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Weight" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Weight" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="Weight" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [UserInfomation] ([UserID], [UserName], [Email], [Password], [Gender], [Weight]) VALUES (@UserID, @UserName, @Email, @Password, @Gender, @Weight);
+SELECT UserID, UserName, Email, Password, Gender, Weight FROM UserInfomation WHERE (UserID = @UserID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UserID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UserID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UserName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Email" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Password" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Password" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Gender" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Gender" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Weight" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="Weight" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT UserInfomation.*
+FROM     UserInfomation</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [UserInfomation] SET [UserID] = @UserID, [UserName] = @UserName, [Email] = @Email, [Password] = @Password, [Gender] = @Gender, [Weight] = @Weight WHERE (([UserID] = @Original_UserID) AND ((@IsNull_UserName = 1 AND [UserName] IS NULL) OR ([UserName] = @Original_UserName)) AND ((@IsNull_Email = 1 AND [Email] IS NULL) OR ([Email] = @Original_Email)) AND ((@IsNull_Password = 1 AND [Password] IS NULL) OR ([Password] = @Original_Password)) AND ((@IsNull_Gender = 1 AND [Gender] IS NULL) OR ([Gender] = @Original_Gender)) AND ((@IsNull_Weight = 1 AND [Weight] IS NULL) OR ([Weight] = @Original_Weight)));
+SELECT UserID, UserName, Email, Password, Gender, Weight FROM UserInfomation WHERE (UserID = @UserID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UserID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UserID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UserName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Email" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Password" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Password" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Gender" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Gender" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Weight" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="Weight" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_UserID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UserID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_UserName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_UserName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Email" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Email" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Password" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Password" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Password" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Password" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Gender" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Gender" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Gender" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Gender" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Weight" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Weight" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Weight" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="Weight" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="UserID" DataSetColumn="UserID" />
+              <Mapping SourceColumn="UserName" DataSetColumn="UserName" />
+              <Mapping SourceColumn="Email" DataSetColumn="Email" />
+              <Mapping SourceColumn="Password" DataSetColumn="Password" />
+              <Mapping SourceColumn="Gender" DataSetColumn="Gender" />
+              <Mapping SourceColumn="Weight" DataSetColumn="Weight" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="FitnessDBConnectionString (Settings)" DbObjectName="FitnessDB.dbo.UserInfomation" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy_UserID" GetMethodModifier="Public" GetMethodName="GetDataBy_UserID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy_UserID" UserSourceName="GetDataBy_UserID">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Email, Gender, Password, UserID, UserName, Weight FROM UserInfomation ORDER BY UserID DESC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="FitnessDBConnectionString (Settings)" DbObjectName="FitnessDB.dbo.UserInfomation" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="UserLogIn" GetMethodModifier="Public" GetMethodName="UserLogIn" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="UserLogIn" UserSourceName="UserLogIn">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * 
+FROM 
+UserInfomation
+WHERE Username COLLATE Latin1_General_BIN =@username AND
+Password COLLATE Latin1_General_BIN =@password;
+</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="username" ColumnName="UserName" DataSourceName="FitnessDB.dbo.UserInfomation" DataTypeServer="varchar(30)" DbType="AnsiString" Direction="Input" ParameterName="@username" Precision="0" ProviderType="VarChar" Scale="0" Size="30" SourceColumn="UserName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="password" ColumnName="Password" DataSourceName="FitnessDB.dbo.UserInfomation" DataTypeServer="varchar(20)" DbType="AnsiString" Direction="Input" ParameterName="@password" Precision="0" ProviderType="VarChar" Scale="0" Size="20" SourceColumn="Password" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ActivityTableAdapter" GeneratorDataComponentClassName="ActivityTableAdapter" Name="Activity" UserDataComponentName="ActivityTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FitnessDBConnectionString (Settings)" DbObjectName="FitnessDB.dbo.Activity" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [Activity] WHERE (([ActivityID] = @Original_ActivityID) AND ([UserID] = @Original_UserID) AND ((@IsNull_ActivityName = 1 AND [ActivityName] IS NULL) OR ([ActivityName] = @Original_ActivityName)) AND ((@IsNull_METs = 1 AND [METs] IS NULL) OR ([METs] = @Original_METs)) AND ((@IsNull_Metric1 = 1 AND [Metric1] IS NULL) OR ([Metric1] = @Original_Metric1)) AND ((@IsNull_Metric2 = 1 AND [Metric2] IS NULL) OR ([Metric2] = @Original_Metric2)) AND ((@IsNull_Metric3 = 1 AND [Metric3] IS NULL) OR ([Metric3] = @Original_Metric3)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ActivityID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ActivityID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_UserID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UserID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ActivityName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ActivityName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ActivityName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ActivityName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_METs" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="METs" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_METs" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="METs" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Metric1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Metric1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Metric1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Metric1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Metric2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Metric2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Metric2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Metric2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Metric3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Metric3" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Metric3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Metric3" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [Activity] ([ActivityID], [UserID], [ActivityName], [METs], [Metric1], [Metric2], [Metric3]) VALUES (@ActivityID, @UserID, @ActivityName, @METs, @Metric1, @Metric2, @Metric3);
+SELECT ActivityID, UserID, ActivityName, METs, Metric1, Metric2, Metric3 FROM Activity WHERE (ActivityID = @ActivityID) AND (UserID = @UserID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ActivityID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ActivityID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UserID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UserID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ActivityName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ActivityName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@METs" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="METs" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Metric1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Metric1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Metric2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Metric2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Metric3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Metric3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Activity.*
+FROM     Activity</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [Activity] SET [ActivityID] = @ActivityID, [UserID] = @UserID, [ActivityName] = @ActivityName, [METs] = @METs, [Metric1] = @Metric1, [Metric2] = @Metric2, [Metric3] = @Metric3 WHERE (([ActivityID] = @Original_ActivityID) AND ([UserID] = @Original_UserID) AND ((@IsNull_ActivityName = 1 AND [ActivityName] IS NULL) OR ([ActivityName] = @Original_ActivityName)) AND ((@IsNull_METs = 1 AND [METs] IS NULL) OR ([METs] = @Original_METs)) AND ((@IsNull_Metric1 = 1 AND [Metric1] IS NULL) OR ([Metric1] = @Original_Metric1)) AND ((@IsNull_Metric2 = 1 AND [Metric2] IS NULL) OR ([Metric2] = @Original_Metric2)) AND ((@IsNull_Metric3 = 1 AND [Metric3] IS NULL) OR ([Metric3] = @Original_Metric3)));
+SELECT ActivityID, UserID, ActivityName, METs, Metric1, Metric2, Metric3 FROM Activity WHERE (ActivityID = @ActivityID) AND (UserID = @UserID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ActivityID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ActivityID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UserID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UserID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ActivityName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ActivityName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@METs" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="METs" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Metric1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Metric1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Metric2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Metric2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Metric3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Metric3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ActivityID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ActivityID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_UserID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UserID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ActivityName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ActivityName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ActivityName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ActivityName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_METs" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="METs" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_METs" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="METs" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Metric1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Metric1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Metric1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Metric1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Metric2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Metric2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Metric2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Metric2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Metric3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Metric3" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Metric3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Metric3" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ActivityID" DataSetColumn="ActivityID" />
+              <Mapping SourceColumn="UserID" DataSetColumn="UserID" />
+              <Mapping SourceColumn="ActivityName" DataSetColumn="ActivityName" />
+              <Mapping SourceColumn="METs" DataSetColumn="METs" />
+              <Mapping SourceColumn="Metric1" DataSetColumn="Metric1" />
+              <Mapping SourceColumn="Metric2" DataSetColumn="Metric2" />
+              <Mapping SourceColumn="Metric3" DataSetColumn="Metric3" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="FitnessDBConnectionString (Settings)" DbObjectName="FitnessDB.dbo.Activity" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy_ActivityID" GetMethodModifier="Public" GetMethodName="GetDataBy_ActivityID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy_ActivityID" UserSourceName="GetDataBy_ActivityID">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Activity.*
+FROM     Activity
+order by ActivityID desc;</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="FitnessDBConnectionString (Settings)" DbObjectName="FitnessDB.dbo.Activity" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy_ActivityName" GetMethodModifier="Public" GetMethodName="GetDataBy_ActivityName" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy_ActivityName" UserSourceName="GetDataBy_ActivityName">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Activity.*
+FROM     Activity
+where ActivityName=@activityname;</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="activityname" ColumnName="ActivityName" DataSourceName="FitnessDB.dbo.Activity" DataTypeServer="varchar(500)" DbType="AnsiString" Direction="Input" ParameterName="@activityname" Precision="0" ProviderType="VarChar" Scale="0" Size="500" SourceColumn="ActivityName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DailyActivityRecordDetailTableAdapter" GeneratorDataComponentClassName="DailyActivityRecordDetailTableAdapter" Name="DailyActivityRecordDetail" UserDataComponentName="DailyActivityRecordDetailTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FitnessDBConnectionString (Settings)" DbObjectName="FitnessDB.dbo.DailyActivityRecordDetail" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [DailyActivityRecordDetail] ([UserID], [ActivityID], [ActivityName], [METs], [Metric1], [Metric2], [Metric3], [Calories]) VALUES (@UserID, @ActivityID, @ActivityName, @METs, @Metric1, @Metric2, @Metric3, @Calories)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UserID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UserID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ActivityID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ActivityID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ActivityName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ActivityName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@METs" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="METs" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Metric1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Metric1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Metric2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Metric2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Metric3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Metric3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Calories" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="Calories" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DailyActivityRecordDetail.*
+FROM     DailyActivityRecordDetail</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="UserID" DataSetColumn="UserID" />
+              <Mapping SourceColumn="ActivityID" DataSetColumn="ActivityID" />
+              <Mapping SourceColumn="ActivityName" DataSetColumn="ActivityName" />
+              <Mapping SourceColumn="METs" DataSetColumn="METs" />
+              <Mapping SourceColumn="Metric1" DataSetColumn="Metric1" />
+              <Mapping SourceColumn="Metric2" DataSetColumn="Metric2" />
+              <Mapping SourceColumn="Metric3" DataSetColumn="Metric3" />
+              <Mapping SourceColumn="Calories" DataSetColumn="Calories" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DailyActivityRecordTableAdapter" GeneratorDataComponentClassName="DailyActivityRecordTableAdapter" Name="DailyActivityRecord" UserDataComponentName="DailyActivityRecordTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FitnessDBConnectionString (Settings)" DbObjectName="FitnessDB.dbo.DailyActivityRecord" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [DailyActivityRecord] WHERE (([UserID] = @Original_UserID) AND ([DailyActivityID] = @Original_DailyActivityID) AND ((@IsNull_TotalCalories = 1 AND [TotalCalories] IS NULL) OR ([TotalCalories] = @Original_TotalCalories)) AND ((@IsNull_Target_Calories = 1 AND [Target_Calories] IS NULL) OR ([Target_Calories] = @Original_Target_Calories)) AND ((@IsNull_Date = 1 AND [Date] IS NULL) OR ([Date] = @Original_Date)) AND ((@IsNull_Give_Message = 1 AND [Give_Message] IS NULL) OR ([Give_Message] = @Original_Give_Message)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_UserID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UserID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_DailyActivityID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DailyActivityID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TotalCalories" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TotalCalories" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_TotalCalories" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="TotalCalories" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Target_Calories" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Target_Calories" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Target_Calories" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="Target_Calories" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Date" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Date" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_Date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Date" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Give_Message" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Give_Message" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Give_Message" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Give_Message" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [DailyActivityRecord] ([UserID], [DailyActivityID], [TotalCalories], [Target_Calories], [Date], [Give_Message]) VALUES (@UserID, @DailyActivityID, @TotalCalories, @Target_Calories, @Date, @Give_Message);
+SELECT UserID, DailyActivityID, TotalCalories, Target_Calories, Date, Give_Message FROM DailyActivityRecord WHERE (DailyActivityID = @DailyActivityID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UserID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UserID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@DailyActivityID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DailyActivityID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@TotalCalories" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="TotalCalories" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Target_Calories" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="Target_Calories" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Date" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Give_Message" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Give_Message" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DailyActivityRecord.*
+FROM     DailyActivityRecord</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [DailyActivityRecord] SET [UserID] = @UserID, [DailyActivityID] = @DailyActivityID, [TotalCalories] = @TotalCalories, [Target_Calories] = @Target_Calories, [Date] = @Date, [Give_Message] = @Give_Message WHERE (([UserID] = @Original_UserID) AND ([DailyActivityID] = @Original_DailyActivityID) AND ((@IsNull_TotalCalories = 1 AND [TotalCalories] IS NULL) OR ([TotalCalories] = @Original_TotalCalories)) AND ((@IsNull_Target_Calories = 1 AND [Target_Calories] IS NULL) OR ([Target_Calories] = @Original_Target_Calories)) AND ((@IsNull_Date = 1 AND [Date] IS NULL) OR ([Date] = @Original_Date)) AND ((@IsNull_Give_Message = 1 AND [Give_Message] IS NULL) OR ([Give_Message] = @Original_Give_Message)));
+SELECT UserID, DailyActivityID, TotalCalories, Target_Calories, Date, Give_Message FROM DailyActivityRecord WHERE (DailyActivityID = @DailyActivityID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UserID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UserID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@DailyActivityID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DailyActivityID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@TotalCalories" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="TotalCalories" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Target_Calories" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="Target_Calories" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Date" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Give_Message" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Give_Message" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_UserID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UserID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_DailyActivityID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DailyActivityID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TotalCalories" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TotalCalories" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_TotalCalories" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="TotalCalories" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Target_Calories" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Target_Calories" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Target_Calories" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="Target_Calories" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Date" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Date" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_Date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Date" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Give_Message" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Give_Message" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Give_Message" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Give_Message" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="UserID" DataSetColumn="UserID" />
+              <Mapping SourceColumn="DailyActivityID" DataSetColumn="DailyActivityID" />
+              <Mapping SourceColumn="TotalCalories" DataSetColumn="TotalCalories" />
+              <Mapping SourceColumn="Target_Calories" DataSetColumn="Target_Calories" />
+              <Mapping SourceColumn="Date" DataSetColumn="Date" />
+              <Mapping SourceColumn="Give_Message" DataSetColumn="Give_Message" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="FitnessDBConnectionString (Settings)" DbObjectName="FitnessDB.dbo.DailyActivityRecord" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy_DailyActivityID" GetMethodModifier="Public" GetMethodName="GetDataBy_DailyActivityID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy_DailyActivityID" UserSourceName="GetDataBy_DailyActivityID">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DailyActivityRecord.*
+FROM     DailyActivityRecord
+order by DailyActivityID desc;</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="FitnessDBConnectionString (Settings)" DbObjectName="FitnessDB.dbo.DailyActivityRecord" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="SearchDataBy_Date" GetMethodModifier="Public" GetMethodName="SearchDataBy_Date" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="SearchDataBy_Date" UserSourceName="SearchDataBy_Date">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DailyActivityRecord.*
+FROM     DailyActivityRecord
+where Date=@date and UserID=@userid;</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="date" ColumnName="Date" DataSourceName="FitnessDB.dbo.DailyActivityRecord" DataTypeServer="date" DbType="AnsiString" Direction="Input" ParameterName="@date" Precision="0" ProviderType="Date" Scale="0" Size="3" SourceColumn="Date" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="userid" ColumnName="UserID" DataSourceName="FitnessDB.dbo.DailyActivityRecord" DataTypeServer="varchar(30)" DbType="AnsiString" Direction="Input" ParameterName="@userid" Precision="0" ProviderType="VarChar" Scale="0" Size="30" SourceColumn="UserID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="FitnessDBConnectionString (Settings)" DbObjectName="FitnessDB.dbo.DailyActivityRecord" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="ShowAllData" GetMethodModifier="Public" GetMethodName="ShowAllData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="ShowAllData" UserSourceName="ShowAllData">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DailyActivityRecord.*
+FROM     DailyActivityRecord
+where UserID=@userid;</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="userid" ColumnName="UserID" DataSourceName="FitnessDB.dbo.DailyActivityRecord" DataTypeServer="varchar(30)" DbType="AnsiString" Direction="Input" ParameterName="@userid" Precision="0" ProviderType="VarChar" Scale="0" Size="30" SourceColumn="UserID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GoalsTableAdapter" GeneratorDataComponentClassName="GoalsTableAdapter" Name="Goals" UserDataComponentName="GoalsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FitnessDBConnectionString (Settings)" DbObjectName="FitnessDB.dbo.Goals" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [Goals] WHERE (([GoalID] = @Original_GoalID) AND ([UserID] = @Original_UserID) AND ((@IsNull_Goal_Description = 1 AND [Goal_Description] IS NULL) OR ([Goal_Description] = @Original_Goal_Description)) AND ((@IsNull_Target_Calories = 1 AND [Target_Calories] IS NULL) OR ([Target_Calories] = @Original_Target_Calories)) AND ((@IsNull_Date = 1 AND [Date] IS NULL) OR ([Date] = @Original_Date)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_GoalID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="GoalID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_UserID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UserID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Goal_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Goal_Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Goal_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Goal_Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Target_Calories" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Target_Calories" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Target_Calories" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="Target_Calories" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Date" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Date" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_Date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Date" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [Goals] ([GoalID], [UserID], [Goal_Description], [Target_Calories], [Date]) VALUES (@GoalID, @UserID, @Goal_Description, @Target_Calories, @Date);
+SELECT GoalID, UserID, Goal_Description, Target_Calories, Date FROM Goals WHERE (GoalID = @GoalID) AND (UserID = @UserID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@GoalID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="GoalID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UserID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UserID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Goal_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Goal_Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Target_Calories" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="Target_Calories" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Date" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Goals.*
+FROM     Goals</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [Goals] SET [GoalID] = @GoalID, [UserID] = @UserID, [Goal_Description] = @Goal_Description, [Target_Calories] = @Target_Calories, [Date] = @Date WHERE (([GoalID] = @Original_GoalID) AND ([UserID] = @Original_UserID) AND ((@IsNull_Goal_Description = 1 AND [Goal_Description] IS NULL) OR ([Goal_Description] = @Original_Goal_Description)) AND ((@IsNull_Target_Calories = 1 AND [Target_Calories] IS NULL) OR ([Target_Calories] = @Original_Target_Calories)) AND ((@IsNull_Date = 1 AND [Date] IS NULL) OR ([Date] = @Original_Date)));
+SELECT GoalID, UserID, Goal_Description, Target_Calories, Date FROM Goals WHERE (GoalID = @GoalID) AND (UserID = @UserID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@GoalID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="GoalID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UserID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UserID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Goal_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Goal_Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Target_Calories" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="Target_Calories" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Date" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_GoalID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="GoalID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_UserID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UserID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Goal_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Goal_Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Goal_Description" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Goal_Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Target_Calories" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Target_Calories" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_Target_Calories" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="Target_Calories" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Date" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Date" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_Date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Date" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="GoalID" DataSetColumn="GoalID" />
+              <Mapping SourceColumn="UserID" DataSetColumn="UserID" />
+              <Mapping SourceColumn="Goal_Description" DataSetColumn="Goal_Description" />
+              <Mapping SourceColumn="Target_Calories" DataSetColumn="Target_Calories" />
+              <Mapping SourceColumn="Date" DataSetColumn="Date" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="FitnessDBConnectionString (Settings)" DbObjectName="FitnessDB.dbo.Goals" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy_GoalID" GetMethodModifier="Public" GetMethodName="GetDataBy_GoalID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy_GoalID" UserSourceName="GetDataBy_GoalID">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Date, GoalID, Goal_Description, Target_Calories, UserID FROM Goals ORDER BY GoalID DESC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="FitnessDBConnectionString (Settings)" DbObjectName="FitnessDB.dbo.Goals" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy_TargetCalories" GetMethodModifier="Public" GetMethodName="GetDataBy_TargetCalories" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy_TargetCalories" UserSourceName="GetDataBy_TargetCalories">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Date, GoalID, Goal_Description, Target_Calories, UserID FROM Goals WHERE (UserID = @userid) ORDER BY GoalID DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="userid" ColumnName="UserID" DataSourceName="FitnessDB.dbo.Goals" DataTypeServer="varchar(30)" DbType="AnsiString" Direction="Input" ParameterName="@userid" Precision="0" ProviderType="VarChar" Scale="0" Size="30" SourceColumn="UserID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="UserInfomation" msprop:Generator_TableClassName="UserInfomationDataTable" msprop:Generator_TableVarName="tableUserInfomation" msprop:Generator_TablePropName="UserInfomation" msprop:Generator_RowDeletingName="UserInfomationRowDeleting" msprop:Generator_RowChangingName="UserInfomationRowChanging" msprop:Generator_RowEvHandlerName="UserInfomationRowChangeEventHandler" msprop:Generator_RowDeletedName="UserInfomationRowDeleted" msprop:Generator_UserTableName="UserInfomation" msprop:Generator_RowChangedName="UserInfomationRowChanged" msprop:Generator_RowEvArgName="UserInfomationRowChangeEvent" msprop:Generator_RowClassName="UserInfomationRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="UserID" msprop:Generator_ColumnVarNameInTable="columnUserID" msprop:Generator_ColumnPropNameInRow="UserID" msprop:Generator_ColumnPropNameInTable="UserIDColumn" msprop:Generator_UserColumnName="UserID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_UserColumnName="UserName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Email" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_UserColumnName="Email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Password" msprop:Generator_ColumnVarNameInTable="columnPassword" msprop:Generator_ColumnPropNameInRow="Password" msprop:Generator_ColumnPropNameInTable="PasswordColumn" msprop:Generator_UserColumnName="Password" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Gender" msprop:Generator_ColumnVarNameInTable="columnGender" msprop:Generator_ColumnPropNameInRow="Gender" msprop:Generator_ColumnPropNameInTable="GenderColumn" msprop:Generator_UserColumnName="Gender" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Weight" msprop:Generator_ColumnVarNameInTable="columnWeight" msprop:Generator_ColumnPropNameInRow="Weight" msprop:Generator_ColumnPropNameInTable="WeightColumn" msprop:Generator_UserColumnName="Weight" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Activity" msprop:Generator_TableClassName="ActivityDataTable" msprop:Generator_TableVarName="tableActivity" msprop:Generator_TablePropName="Activity" msprop:Generator_RowDeletingName="ActivityRowDeleting" msprop:Generator_RowChangingName="ActivityRowChanging" msprop:Generator_RowEvHandlerName="ActivityRowChangeEventHandler" msprop:Generator_RowDeletedName="ActivityRowDeleted" msprop:Generator_UserTableName="Activity" msprop:Generator_RowChangedName="ActivityRowChanged" msprop:Generator_RowEvArgName="ActivityRowChangeEvent" msprop:Generator_RowClassName="ActivityRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ActivityID" msprop:Generator_ColumnVarNameInTable="columnActivityID" msprop:Generator_ColumnPropNameInRow="ActivityID" msprop:Generator_ColumnPropNameInTable="ActivityIDColumn" msprop:Generator_UserColumnName="ActivityID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UserID" msprop:Generator_ColumnVarNameInTable="columnUserID" msprop:Generator_ColumnPropNameInRow="UserID" msprop:Generator_ColumnPropNameInTable="UserIDColumn" msprop:Generator_UserColumnName="UserID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ActivityName" msprop:Generator_ColumnVarNameInTable="columnActivityName" msprop:Generator_ColumnPropNameInRow="ActivityName" msprop:Generator_ColumnPropNameInTable="ActivityNameColumn" msprop:Generator_UserColumnName="ActivityName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="METs" msprop:Generator_ColumnVarNameInTable="columnMETs" msprop:Generator_ColumnPropNameInRow="METs" msprop:Generator_ColumnPropNameInTable="METsColumn" msprop:Generator_UserColumnName="METs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Metric1" msprop:Generator_ColumnVarNameInTable="columnMetric1" msprop:Generator_ColumnPropNameInRow="Metric1" msprop:Generator_ColumnPropNameInTable="Metric1Column" msprop:Generator_UserColumnName="Metric1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Metric2" msprop:Generator_ColumnVarNameInTable="columnMetric2" msprop:Generator_ColumnPropNameInRow="Metric2" msprop:Generator_ColumnPropNameInTable="Metric2Column" msprop:Generator_UserColumnName="Metric2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Metric3" msprop:Generator_ColumnVarNameInTable="columnMetric3" msprop:Generator_ColumnPropNameInRow="Metric3" msprop:Generator_ColumnPropNameInTable="Metric3Column" msprop:Generator_UserColumnName="Metric3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DailyActivityRecordDetail" msprop:Generator_TableClassName="DailyActivityRecordDetailDataTable" msprop:Generator_TableVarName="tableDailyActivityRecordDetail" msprop:Generator_TablePropName="DailyActivityRecordDetail" msprop:Generator_RowDeletingName="DailyActivityRecordDetailRowDeleting" msprop:Generator_RowChangingName="DailyActivityRecordDetailRowChanging" msprop:Generator_RowEvHandlerName="DailyActivityRecordDetailRowChangeEventHandler" msprop:Generator_RowDeletedName="DailyActivityRecordDetailRowDeleted" msprop:Generator_UserTableName="DailyActivityRecordDetail" msprop:Generator_RowChangedName="DailyActivityRecordDetailRowChanged" msprop:Generator_RowEvArgName="DailyActivityRecordDetailRowChangeEvent" msprop:Generator_RowClassName="DailyActivityRecordDetailRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="UserID" msprop:Generator_ColumnVarNameInTable="columnUserID" msprop:Generator_ColumnPropNameInRow="UserID" msprop:Generator_ColumnPropNameInTable="UserIDColumn" msprop:Generator_UserColumnName="UserID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ActivityID" msprop:Generator_ColumnVarNameInTable="columnActivityID" msprop:Generator_ColumnPropNameInRow="ActivityID" msprop:Generator_ColumnPropNameInTable="ActivityIDColumn" msprop:Generator_UserColumnName="ActivityID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ActivityName" msprop:Generator_ColumnVarNameInTable="columnActivityName" msprop:Generator_ColumnPropNameInRow="ActivityName" msprop:Generator_ColumnPropNameInTable="ActivityNameColumn" msprop:Generator_UserColumnName="ActivityName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="METs" msprop:Generator_ColumnVarNameInTable="columnMETs" msprop:Generator_ColumnPropNameInRow="METs" msprop:Generator_ColumnPropNameInTable="METsColumn" msprop:Generator_UserColumnName="METs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Metric1" msprop:Generator_ColumnVarNameInTable="columnMetric1" msprop:Generator_ColumnPropNameInRow="Metric1" msprop:Generator_ColumnPropNameInTable="Metric1Column" msprop:Generator_UserColumnName="Metric1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Metric2" msprop:Generator_ColumnVarNameInTable="columnMetric2" msprop:Generator_ColumnPropNameInRow="Metric2" msprop:Generator_ColumnPropNameInTable="Metric2Column" msprop:Generator_UserColumnName="Metric2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Metric3" msprop:Generator_ColumnVarNameInTable="columnMetric3" msprop:Generator_ColumnPropNameInRow="Metric3" msprop:Generator_ColumnPropNameInTable="Metric3Column" msprop:Generator_UserColumnName="Metric3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Calories" msprop:Generator_ColumnVarNameInTable="columnCalories" msprop:Generator_ColumnPropNameInRow="Calories" msprop:Generator_ColumnPropNameInTable="CaloriesColumn" msprop:Generator_UserColumnName="Calories" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DailyActivityRecord" msprop:Generator_TableClassName="DailyActivityRecordDataTable" msprop:Generator_TableVarName="tableDailyActivityRecord" msprop:Generator_TablePropName="DailyActivityRecord" msprop:Generator_RowDeletingName="DailyActivityRecordRowDeleting" msprop:Generator_RowChangingName="DailyActivityRecordRowChanging" msprop:Generator_RowEvHandlerName="DailyActivityRecordRowChangeEventHandler" msprop:Generator_RowDeletedName="DailyActivityRecordRowDeleted" msprop:Generator_UserTableName="DailyActivityRecord" msprop:Generator_RowChangedName="DailyActivityRecordRowChanged" msprop:Generator_RowEvArgName="DailyActivityRecordRowChangeEvent" msprop:Generator_RowClassName="DailyActivityRecordRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="UserID" msprop:Generator_ColumnVarNameInTable="columnUserID" msprop:Generator_ColumnPropNameInRow="UserID" msprop:Generator_ColumnPropNameInTable="UserIDColumn" msprop:Generator_UserColumnName="UserID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DailyActivityID" msprop:Generator_ColumnVarNameInTable="columnDailyActivityID" msprop:Generator_ColumnPropNameInRow="DailyActivityID" msprop:Generator_ColumnPropNameInTable="DailyActivityIDColumn" msprop:Generator_UserColumnName="DailyActivityID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TotalCalories" msprop:Generator_ColumnVarNameInTable="columnTotalCalories" msprop:Generator_ColumnPropNameInRow="TotalCalories" msprop:Generator_ColumnPropNameInTable="TotalCaloriesColumn" msprop:Generator_UserColumnName="TotalCalories" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Target_Calories" msprop:Generator_ColumnVarNameInTable="columnTarget_Calories" msprop:Generator_ColumnPropNameInRow="Target_Calories" msprop:Generator_ColumnPropNameInTable="Target_CaloriesColumn" msprop:Generator_UserColumnName="Target_Calories" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Date" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_UserColumnName="Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Give_Message" msprop:Generator_ColumnVarNameInTable="columnGive_Message" msprop:Generator_ColumnPropNameInRow="Give_Message" msprop:Generator_ColumnPropNameInTable="Give_MessageColumn" msprop:Generator_UserColumnName="Give_Message" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Goals" msprop:Generator_TableClassName="GoalsDataTable" msprop:Generator_TableVarName="tableGoals" msprop:Generator_TablePropName="Goals" msprop:Generator_RowDeletingName="GoalsRowDeleting" msprop:Generator_RowChangingName="GoalsRowChanging" msprop:Generator_RowEvHandlerName="GoalsRowChangeEventHandler" msprop:Generator_RowDeletedName="GoalsRowDeleted" msprop:Generator_UserTableName="Goals" msprop:Generator_RowChangedName="GoalsRowChanged" msprop:Generator_RowEvArgName="GoalsRowChangeEvent" msprop:Generator_RowClassName="GoalsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="GoalID" msprop:Generator_ColumnVarNameInTable="columnGoalID" msprop:Generator_ColumnPropNameInRow="GoalID" msprop:Generator_ColumnPropNameInTable="GoalIDColumn" msprop:Generator_UserColumnName="GoalID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UserID" msprop:Generator_ColumnVarNameInTable="columnUserID" msprop:Generator_ColumnPropNameInRow="UserID" msprop:Generator_ColumnPropNameInTable="UserIDColumn" msprop:Generator_UserColumnName="UserID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Goal_Description" msprop:Generator_ColumnVarNameInTable="columnGoal_Description" msprop:Generator_ColumnPropNameInRow="Goal_Description" msprop:Generator_ColumnPropNameInTable="Goal_DescriptionColumn" msprop:Generator_UserColumnName="Goal_Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Target_Calories" msprop:Generator_ColumnVarNameInTable="columnTarget_Calories" msprop:Generator_ColumnPropNameInRow="Target_Calories" msprop:Generator_ColumnPropNameInTable="Target_CaloriesColumn" msprop:Generator_UserColumnName="Target_Calories" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Date" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_UserColumnName="Date" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:UserInfomation" />
+      <xs:field xpath="mstns:UserID" />
+    </xs:unique>
+    <xs:unique name="Activity_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Activity" />
+      <xs:field xpath="mstns:ActivityID" />
+      <xs:field xpath="mstns:UserID" />
+    </xs:unique>
+    <xs:unique name="DailyActivityRecord_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DailyActivityRecord" />
+      <xs:field xpath="mstns:DailyActivityID" />
+    </xs:unique>
+    <xs:unique name="Goals_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Goals" />
+      <xs:field xpath="mstns:GoalID" />
+      <xs:field xpath="mstns:UserID" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK__Activity__UserID__4BAC3F29" msdata:parent="UserInfomation" msdata:child="Activity" msdata:parentkey="UserID" msdata:childkey="UserID" msprop:Generator_UserChildTable="Activity" msprop:Generator_ChildPropName="GetActivityRows" msprop:Generator_UserRelationName="FK__Activity__UserID__4BAC3F29" msprop:Generator_ParentPropName="UserInfomationRow" msprop:Generator_RelationVarName="relationFK__Activity__UserID__4BAC3F29" msprop:Generator_UserParentTable="UserInfomation" />
+      <msdata:Relationship name="FK__Goals__UserID__4E88ABD4" msdata:parent="UserInfomation" msdata:child="Goals" msdata:parentkey="UserID" msdata:childkey="UserID" msprop:Generator_UserChildTable="Goals" msprop:Generator_ChildPropName="GetGoalsRows" msprop:Generator_UserRelationName="FK__Goals__UserID__4E88ABD4" msprop:Generator_ParentPropName="UserInfomationRow" msprop:Generator_RelationVarName="relationFK__Goals__UserID__4E88ABD4" msprop:Generator_UserParentTable="UserInfomation" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>
